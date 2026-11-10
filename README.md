@@ -1,11 +1,20 @@
 # Assistive Voice Dispatcher (Fofocador)
 ### Estudo de caso sobre arquitetura orientada a eventos, processamento local-first e acessibilidade no Android
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Mihvieira/study-case-fofocador?style=flat-square&color=blue&label=APK%20Release)](https://github.com/Mihvieira/study-case-fofocador/releases)
+[![Platform](https://img.shields.io/badge/Platform-Android%2013%2B%20(API%2033)-green?style=flat-square)](https://android.com)
+[![Architecture](https://img.shields.io/badge/Architecture-Event--Driven%20%7C%20Local--First-orange?style=flat-square)](#arquitetura-conceitual)
+[![Tests](https://img.shields.io/badge/Tests-48%2F48%20Passing%20(100%25)-brightgreen?style=flat-square)](#avaliação-e-evidências-técnicas)
+
 ## Resumo
 
 O **Fofocador** é uma aplicação Android nativa projetada para converter eventos heterogêneos do dispositivo em avisos de voz contextualizados e falados em tempo real. Este estudo de caso aborda as decisões de arquitetura de software, os trade-offs de engenharia e os desafios de integração de baixo nível envolvidos na captura de chamadas telefônicas, filtragem de notificações do WhatsApp, telemetria de bateria e alarmes de rotina.
 
 A solução adota uma abordagem estritamente **Local-First / On-Device**: tanto o processamento de regras e filtragem de privacidade quanto a síntese de voz (TTS) ocorrem localmente no hardware do usuário. O modelo elimina dependência de servidores remotos, atinge latência de despacho sub-15ms e mitiga riscos de exposição de dados sensíveis.
+
+> **📦 Demonstração & Download do APK:**  
+> Como o código-fonte da aplicação é proprietário, disponibilizamos o binário compilado (MVP) diretamente na aba de releases para fins de avaliação e testes práticos em dispositivo físico Android:  
+> 👉 [**Acessar Release & Baixar APK (v1.0.0-mvp)**](https://github.com/Mihvieira/study-case-fofocador/releases)
 
 > **Nota sobre o escopo:** Este documento é um relatório de arquitetura e engenharia conceitual. Como o código-fonte do produto é proprietário, este estudo não expõe lógicas de negócio fechadas, mantendo o foco em contratos, decisões arquiteturais e métricas de desempenho reproduzíveis.
 
